@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    class Program {
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Enter n:");
+                int n = int.Parse(Console.ReadLine());
+                string res = null;
+                while (n != 0)
+                {
+                    if (n % 2 == 1)
+                    {
+                        n -= 1;
+                        res += "1";
+                    }
+                    else
+                        res += "0";
+                        n /= 2;
+                }
+                Console.WriteLine(Reverse(res));
+            }
+            public static string Reverse(string text)
+            {
+                char[] cArray = text.ToCharArray();
+                string reverse = String.Empty;
+                for (int i = cArray.Length - 1; i > -1; i--)
+                {
+                    reverse += cArray[i];
+                }
+                return reverse;
+            }
+
+        }
+    }
