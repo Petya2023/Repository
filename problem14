@@ -1,0 +1,24 @@
+using System;
+
+namespace KursovaRabota
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Първи член на прогресията: ");
+            int a1 = int.Parse(Console.ReadLine());
+            Console.Write("Разлика на прогресията: ");
+            int d = int.Parse(Console.ReadLine());
+            Console.Write("Брой членове на прогресията: ");
+            int n = int.Parse(Console.ReadLine());
+            int an = a1 + (n - 1) * d;
+            int sum = 0;
+            for (int i = a1; i <= an; i = i + d)
+            {
+                sum = (a1 + an) * n / 2;
+            }
+            Console.WriteLine("Сумата на първите " + n + " члена на прогресията е " + sum + ".");
+        }
+    }
+}
