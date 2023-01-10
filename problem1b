@@ -1,0 +1,31 @@
+using System;
+using System.Linq;
+
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PrintIndex();
+        } static void PrintIndex ()
+        {
+            int n = 2072;
+            int n0 = n / 8;
+            //259
+            int ostatak0 = n % 8;
+            //0
+            int n1 = n0 / 8;
+            //32
+            int ostatak1 = n0 % 8;
+            //3
+            int n2 = n1 / 8;
+            //4
+            int ostatak2 = n % 8;
+            //0
+            int n3 = n2 / 8 + n2;
+            //4
+            Console.Write(n3 + "" + "" + ostatak2 + "" + "" + ostatak1 + "" + "" + ostatak0);
+        }
+    }
+}
